@@ -1,4 +1,4 @@
-https://github.com/lihy2016/web.git
+https://github.com/frontweb360/web
 
 server.js 静态服务器
 
