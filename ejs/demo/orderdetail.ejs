@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../inc/meta.ejs %>
+    <title>orderlist</title> 
+    <!--<link rel="stylesheet" href="static/pagescript/demo/orderdetail/css/main.css">-->
+    <link rel="stylesheet/less" href="<%= staticurl %>pagescript/demo/orderdetail/less/main.less"/>
+    <% include ../inc/lessconf.ejs %>
+</head>
+<body>
+<div id="container">
+    <% include template/header.ejs %>
+	<div class="mod" id="progress">
+		<div id="charts"></div>
+	</div>
+    <div class="topbar"><span><a href="/productlist"><i class="glyphicon glyphicon-wrench"></i>产品生产状况</a></span><span><a href="/workerlist"><i class="glyphicon glyphicon-dashboard"></i>实时产线进展</a></span></div>
+	<div class="mod" id="details">
+		<h3 class="item"><span class="title"></span>订单详情</h3>
+		<ul>
+			<li><span>名称</span>复活节</li>
+			<li><span>订单编号</span>WEDF1234d</li>
+			<li><span>客户</span>LG</li>
+			<li><span>订单金额</span>3000万</li>
+			<li><span>订单数量</span>100000件</li>
+			<li><span>开始生产日期</span>2016-10-20</li>
+			<li><span>结束生产日期</span>2016-12-02</li>
+			<li><span>交付日期</span>2016-12-05</li>
+			<li><span>产品工艺</span>切割焊点切割焊点</li>
+		</ul>
+	</div>
+    <footer>@copyRight shengjing 2016.</footer>
+</div>
+</body>
+<% include ../inc/requireconf.ejs %>
+<script defer src="<%= staticurl %>common/core/require.js" data-main="pagescript/demo/orderdetail/js/main"></script>
+</html>

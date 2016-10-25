@@ -1,0 +1,75 @@
+@import "../../base/less/base";
+@import "../../base/less/header";
+@import "../../base/less/footer";
+
+.mod{
+	margin:10px 0;
+	padding:0 10px;
+	h3 {
+		color: #1E1E1E;
+		font-size: 15px;
+		font-weight: bold;
+		height: 15px;
+		line-height: 15px;
+		margin: 0;
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 3px;
+			height: 14px;
+			vertical-align: -1px;
+			background-color: #3aa978;
+			margin-right: 8px;
+		}
+	}
+}
+#productdetail{
+	padding:5px 30px;
+}
+.step{
+	font-size:13px;
+	color:@f2;
+	margin-top:20px;
+	position:relative;
+	.line{
+		width:1px;
+		height:100%;
+		background:#eaeaea;
+		position:absolute;
+		left:6px;
+		top:4px;
+		z-index:1;
+	}
+	.step-list{
+		position:relative;
+		z-index:2;
+	}
+	.item-step{
+		margin:0 0 20px 0;
+	}
+	.order{
+		margin:0 20px 0 0;
+		background:#fff;
+		i{
+			position:relative;
+			top:2px;
+			left:0px;
+		}
+		.glyphicon-ok-circle{
+			color:@dc;
+			font-size:15px;
+			position:relative;
+			left:-1px;
+		}
+		.glyphicon-remove-circle{
+			color:@ac;
+		}
+		.glyphicon-record{
+			color:#d6d6d6;
+		}
+	}
+}
+
+
+	
+

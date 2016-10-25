@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+</head>
+<body>
+<style>
+#charts1{width:100%;height:400px;}
+#charts2{width:100%;height:400px;}
+#charts3{width:100%;height:400px;}
+#charts4{width:100%;height:400px;}
+</style>
+<div id="charts1"></div>
+<div id="charts2"></div>
+<div id="charts3"></div>
+<div id="charts4"></div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<!--
+<script src="js/highcharts.src.js"></script>
+<script src="js/exporting.src.js"></script>
+-->
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+
+<script>
+	function getData(k){
+		var data = [];
+		for(var i=0;i<k;i++){
+			data.push({name:'第'+(i+1)+'生产线',val:Math.round(Math.random()*1000)});
+		}
+		return data;
+	}
+
+	var option = {                  
+        chart: {
+            type: ''                           
+        },
+        title: {
+            text: '实时产量'                 
+        },
+        xAxis: {
+            categories: []   //指定x轴分组
+        },
+        yAxis: {
+            title: {
+                text: '产量'                 //指定y轴的标题
+            }
+        },
+        series: [{                                 //指定数据列
+            name: '产量',                          //数据列名
+            data: []                        //数据
+        }]
+    };
+
+      	var tid1 = setInterval(function(){
+      		var data = getData(20);
+      		var dataX = [],
+      			dataY = [];
+      		for(var i=0;i<data.length;i++){
+      			dataX.push(data[i].name);
+      			dataY.push(data[i].val);
+      		}
+      		option.xAxis.categories = dataX;
+      		option.series[0].data = dataY;
+      		option.chart.type = 'line';
+      		$('#charts1').highcharts(option);
+      	},3000);
+
+      	var tid2 = setInterval(function(){
+      		var data = getData(8);
+      		var dataX = [],
+      			dataY = [];
+      		for(var i=0;i<data.length;i++){
+      			dataX.push(data[i].name);
+      			dataY.push(data[i].val);
+      		}
+      		option.xAxis.categories = dataX;
+      		option.series[0].data = dataY;
+      		option.chart.type = 'bar';
+      		$('#charts2').highcharts(option);
+      	},3000);
+
+      	var tid3 = setInterval(function(){
+      		var data = getData(5);
+      		var dataX = [],
+      			dataY = [];
+      		for(var i=0;i<data.length;i++){
+      			dataX.push(data[i].name);
+      			dataY.push(data[i].val);
+      		}
+      		option.xAxis.categories = dataX;
+      		option.series[0].data = dataY;
+      		option.chart.type = 'pie';
+      		$('#charts3').highcharts(option);
+      	},3000);
+
+      	var tid4 = setInterval(function(){
+      		var data = getData(300);
+      		var dataX = [],
+      			dataY = [];
+      		for(var i=0;i<data.length;i++){
+      			dataX.push(data[i].name);
+      			dataY.push(data[i].val);
+      		}
+      		option.xAxis.categories = dataX;
+      		option.series[0].data = dataY;
+      		option.chart.type = 'scatter';
+      		$('#charts4').highcharts(option);
+      	},3000);
+        
+</script>
+</html>

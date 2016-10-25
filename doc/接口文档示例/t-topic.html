@@ -1,0 +1,69 @@
+<!doctype html public "-//w3c//dtd html 4.01//en" "http://www.w3.org/tr/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>接口文档</title>
+<link rel=stylesheet href="css/style.css" type="text/css" />
+<link rel=stylesheet href="css/dpSyntaxHighlighter.css" type="text/css" />
+<script src="js/dpSyntaxHighlighter.js"></script>
+</head>
+<body>
+<div>
+    <div id="hd"class="globalHeader">Tech document</div>
+    <div id="bd" class="layout">
+        <!-- 模块开始 -->
+        <div class="cssColumnTitle" id="getKeyTw">我参与的话题</div>
+        <div class="description">
+        	<p><strong>调用方：</strong></p>
+            <textarea class="JAVASCRIPT" name="code">
+http://XXX.shengjing.com/interface/tw/twTopic.jsp?act=getKeyTw
+											&key=中国//(必须)话题名称
+											&page=1//页码
+											&pageSize=20//每页20个
+
+{
+    "result" : 1,
+    "error":"",
+    "data":{
+        "total":123,
+        "items":[
+            {
+                "id":"111",					//微博id
+                "word":"在这里",				//微博内容
+                "uid":"669448",				//微博作者id
+                "uname":"廖廖",				//微博作者name
+                "star":"1",					//1为牛人，0为非牛人
+                "time":"1280205001811",		//微博时间
+                "from":"通过网页", 			//来源
+                "shareCount":"12",				//微博转发数
+                "replyCount":"23",				//微博回复数
+                "media":"", 					//引用的图片
+                "mediaFlag":"",				//是否有图片
+				"originContent ":"",				//未处理的微博内容
+                
+                /*如果该微博是转发*/
+                "sharedId":"",					//转发微博id
+                "sharedUid":"",				//转发微博作者id
+                "sharedStar":"1",				//转发微博作者是否牛人
+                "sharedUname":"",				//转发微博作者name
+                "sharedTitle":"",				//转发微博内容
+                "sharedMedia":"",				//转发微博图片地址
+                "sharedShareCount":"",			//转发微博转发数
+                "sharedReplyCount":""			//转发微博回复数
+            }
+        ]
+    }
+}
+            </textarea>
+        </div>
+        <div class="backtotop"><a href="#">返回顶部↑</a></div>
+        <!-- 模块结束 -->
+        <div id="ft">
+        <span>@2010 shengjing. 盛景 Tech Document chm.</span>
+    </div>
+</div>
+<script class="javascript">
+    dp.SyntaxHighlighter.HighlightAll('code');
+</script> 
+</body>
+</html>

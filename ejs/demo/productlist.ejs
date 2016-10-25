@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../inc/meta.ejs %>
+    <title>orderlist</title> 
+    <!--<link rel="stylesheet" href="static/pagescript/demo/productlist/css/main.css">-->
+    <link rel="stylesheet/less" href="<%= staticurl %>pagescript/demo/productlist/less/main.less"/>
+    <% include ../inc/lessconf.ejs %>
+</head>
+<body>
+<div class="container">
+    <% include template/header.ejs %>
+	<div class="mod" id="productlist">
+        <div class="list"></div>
+	</div>
+    <footer>@copyRight shengjing 2016.</footer>
+</div>
+</body>
+<% include ../inc/requireconf.ejs %>
+<script defer src="<%= staticurl %>common/core/require.js" data-main="pagescript/demo/productlist/js/main"></script>
+</html>

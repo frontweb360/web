@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<title>RPD-demo | 实时产线进展</title>
+<link rel="stylesheet/less" href="http://192.168.92.155/static/pagescript/demo/workerlist/less/main.less"/>
+<script>
+    less = {
+        env: "development"
+    };
+</script>
+<script src="http://192.168.92.155/static/common/core/less.js"></script>
+<script>
+    less.watch();
+</script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>RPD</h1>
+        <span class="menu"><i class="glyphicon glyphicon-align-justify"></i></span>
+    </header>
+	<div class="mod" id="workerlist">
+		<table>
+			<tr><td>员工编号</td><td>物料编号</td><td>耗时</td><td>质检</td></tr>
+			<tr><td><a href="/workerdetail?id=23554">23554</a></td><td>LM0123S</td><td>00:20:00</td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
+            <tr><td><a href="/workerdetail?id=23555">23555</a></td><td>LM0123S</td><td>00:20:00</td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
+            <tr><td><a href="/workerdetail?id=23556">23556</a></td><td>LM0123S</td><td>00:20:00</td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
+            <tr><td><a href="/workerdetail?id=23557">23557</a></td><td>LM0123S</td><td>00:20:00</td><td><i class="glyphicon glyphicon-remove"></i></td></tr>
+            <tr><td><a href="/workerdetail?id=23558">23558</a></td><td>LM0123S</td><td>00:20:00</td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
+            <tr><td><a href="/workerdetail?id=23559">23559</a></td><td>LM0123S</td><td>00:20:00</td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
+		</table>
+	</div>
+</div>
+</body>
+<script>
+    var require = {
+        baseUrl: 'http://192.168.92.155/static',   //"static"
+        text: {
+            env: 'xhr'
+        },
+        paths: {
+            common: 'common',
+            pagescript: 'pagescript',
+            jquery: 'common/core/jquery/jquery-2.1.4.min',
+            "jquery/browser": 'common/core/jquery-plugins/jquery.browser.min',
+            zepto:'common/core/zepto-build/zepto.min',
+            wxapi: 'common/core/jweixin-1.0.0',
+            'wxapi.default.config': 'common/core/wx.default.config',
+            hammerjs: 'common/core/hammer-2.0.6/hammer.min',
+            'jquery-hammer': 'common/core/hammer-2.0.6/jquery.hammer',
+            echarts:'common/core/echarts'
+        }
+    };
+</script>
+<script defer src="http://192.168.92.155/static/common/core/require.js" data-main="http://192.168.92.155/static/pagescript/demo/workerlist/js/main.js"></script>
+</html>

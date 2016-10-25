@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../inc/meta.ejs %>
+        <title>login</title> 
+        <!--<link rel="stylesheet" href="static/pagescript/demo/login/css/main.css">-->
+        <link rel="stylesheet/less" href="<%= staticurl %>pagescript/demo/login/less/main.less"/>
+        <% include ../inc/lessconf.ejs %>
+    </head>
+<body>
+<div class="contianer">
+  <h1>RPD</h1>
+  <div class="tips">请输入用户名和密码登录RPD系统</div>
+  <form method="post" action="#" class="form">
+    <input type="text" placeholder="用户名" class="uid"/>
+    <input type="text" placeholder="密码" class="pas"/>
+    <a href="javascript:void(0)" class="btn btn-primary login-btn">登录</a>
+  </form>
+  <div class="bom"><a href="#">注册RPD</a><a href="#">忘记密码</a></div>
+</div>
+</body>
+<% include ../inc/requireconf.ejs %>
+<script defer src="<%= staticurl %>common/core/require.js" data-main="pagescript/demo/login/js/main"></script>
+</html>

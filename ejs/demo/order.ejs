@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../inc/meta.ejs %>
+    <title>orderlist</title> 
+    <!--<link rel="stylesheet" href="static/pagescript/demo/order/css/main.css">-->
+    <link rel="stylesheet/less" href="<%= staticurl %>pagescript/demo/order/less/main.less"/>
+    <% include ../inc/lessconf.ejs %>
+</head>
+<body>
+<div class="container">
+    <% include template/header.ejs %>
+	<div class="mod" id="order">
+        <div class="order-box">
+            <div class="item"><a href="/orderlist">进行中的订单</a></div>
+            <div class="item"><a href="/orderlist">已完成的订单</a></div>
+        </div>
+        <div class="order-box">
+            <div class="item"><a href="/orderlist">未开始的订单</a></div>
+            <div class="item"><a href="/orderlist">全部订单</a></div>
+        </div>
+	</div>
+</div>
+</body>
+<% include ../inc/requireconf.ejs %>
+<script defer src="<%= staticurl %>common/core/require.js" data-main="pagescript/demo/order/js/main"></script>
+</html>

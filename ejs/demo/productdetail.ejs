@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../inc/meta.ejs %>
+    <title>orderlist</title> 
+    <!--<link rel="stylesheet" href="static/pagescript/demo/productdetail/css/main.css">-->
+    <link rel="stylesheet/less" href="<%= staticurl %>pagescript/demo/productdetail/less/main.less"/>
+    <% include ../inc/lessconf.ejs %>
+</head>
+<body>
+<div class="container">
+    <% include template/header.ejs %>
+	<div class="mod" id="productdetail">
+		<div class="step">
+            <div class="line"></div>
+            <div class="step-list">
+    			<div class="item-step"><span class="order"><i class="glyphicon glyphicon-ok-circle"></i></span>车头后片黑色料刀模打 已经完成</div>
+                <div class="item-step"><span class="order"><i class="glyphicon glyphicon-ok-circle"></i></span>车头外围带驳料片刀模打 已经完成</div>
+                <div class="item-step"><span class="order"><i class="glyphicon glyphicon-ok-circle"></i></span>车头柱围带开条 已经完成</div>
+                <div class="item-step"><span class="order"><i class="glyphicon glyphicon-ok-circle"></i></span>靠背顶片开裁 已经完成</div>
+                <div class="item-step"><span class="order"><i class="glyphicon glyphicon-record"></i></span>面片连中片小方中扯开条 未完成</div>
+                <div class="item-step"><span class="order"><i class="glyphicon glyphicon-record"></i></span>底座围带整卷印 未完成</div>
+                <div class="item-step"><span class="order"><i class="glyphicon glyphicon-record"></i></span>底座围带合口 未完成</div>
+                <div class="item-step"><span class="order"><i class="glyphicon glyphicon-record"></i></span>车头成形 未完成</div>
+    		</div>
+        </div>
+	</div>
+</div>
+</body>
+<% include ../inc/requireconf.ejs %>
+<script defer src="<%= staticurl %>common/core/require.js" data-main="pagescript/demo/productdetail/js/main"></script>
+</html>

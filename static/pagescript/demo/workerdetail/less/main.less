@@ -1,0 +1,80 @@
+@import "../../base/less/base";
+@import "../../base/less/header";
+@import "../../base/less/footer";
+
+.mod{
+	margin:10px 0;
+	padding:0 10px;
+	h3 {
+		color: #1E1E1E;
+		font-size: 15px;
+		font-weight: bold;
+		height: 15px;
+		line-height: 15px;
+		margin: 0;
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 3px;
+			height: 14px;
+			vertical-align: -1px;
+			background-color: #3aa978;
+			margin-right: 8px;
+		}
+	}
+	h4{
+		font-weight:normal;
+		font-size:14px;
+		color:@f2;
+		width:300px;
+		text-align:center;
+		margin:0 auto 10px;
+		line-height:24px;
+	}
+}
+#workerdetail{
+	.img{
+		width:100px;
+		height:100px;
+		border-radius:200px;
+		overflow:hidden;
+		margin:0 auto;
+		img{
+			width:100%;
+		}
+	}
+	ul{
+		padding:10px;
+		li{
+			border-bottom:1px solid #e1e1e1;
+			display:inline-block;
+			height:40px;
+			line-height:40px;
+			width:100%;
+			font-size:14px;
+			position:relative;
+			padding:0 0 0 90px;
+			box-sizing:border-box;
+			color:@f2;
+			&:last-child{
+				border-bottom:0 none;
+			}
+			span{
+				position:absolute;
+				top:0px;
+				left:0px;
+				bottom:0px;
+				width:70px;
+				text-align:right;
+				font-size:13px;
+				color:@f3;
+			}
+		}
+	}
+}
+
+
+
+
+	
+

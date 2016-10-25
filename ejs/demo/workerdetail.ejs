@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../inc/meta.ejs %>
+    <title>orderlist</title> 
+    <!--<link rel="stylesheet" href="static/pagescript/demo/workerdetail/css/main.css">-->
+    <link rel="stylesheet/less" href="<%= staticurl %>pagescript/demo/workerdetail/less/main.less"/>
+    <% include ../inc/lessconf.ejs %>
+</head>
+<body>
+<div class="container">
+    <% include template/header.ejs %>
+	<div class="mod" id="workerdetail">
+		<div class="img"><img src="http://192.168.92.155/static/pagescript/demo/workerdetail/img/default-avatar.png" /></div>
+		<h4>员工编号：23554<br/>姓名：王XX</h4>
+		<ul>
+			<li><span>上班打卡</span>2016-12-20 8:00:00</li>
+			<li><span>下班打卡</span>2016-12-20 12:00:00</li>
+			<li><span>工作时长</span>4小时</li>
+			<li><span>完成数量</span>100件</li>
+			<li><span>平均耗时</span>10分15秒</li>
+			<li><span>合格率</span>80%</li>
+		</ul>
+	</div>
+</div>
+</body>
+<% include ../inc/requireconf.ejs %>
+<script defer src="<%= staticurl %>common/core/require.js" data-main="pagescript/demo/workerdetail/js/main"></script>
+</html>

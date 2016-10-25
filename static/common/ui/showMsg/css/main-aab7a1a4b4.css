@@ -1,0 +1,1 @@
+.msg-box,.msg-box .msg-card{position:fixed;left:0;right:0}.msg-box{display:none;top:0;bottom:0;background:rgba(128,128,128,.41);z-index:500}.msg-box .msg-card{top:30%;margin:auto 0;padding:10px;background:rgba(126,55,55,.9);font-size:16px;color:#fff;text-align:center;line-height:21px;z-index:1000}

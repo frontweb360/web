@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<title>RPD-demo | echarts</title>
+<link rel="stylesheet/less" href="http://192.168.92.155/static/pagescript/demo/echarts/less/main.less"/>
+<script>
+    less = {
+        env: "development"
+    };
+</script>
+<script src="http://192.168.92.155/static/common/core/less.js"></script>
+<script>
+    less.watch();
+</script>
+</head>
+<body>
+<div id="container">
+    <header>
+        <h1>RPD</h1>
+        <span class="menu"><i class="glyphicon glyphicon-align-justify"></i></span>
+    </header>
+    <h3>实时(间隔3秒)</h3>
+	<div class="mod" id="progress">
+		<div id="charts1"></div>
+        <div id="charts2"></div>
+        <div id="charts3"></div>
+        <div id="charts4"></div>
+	</div>
+</div>
+</body>
+<script>
+    var require = {
+        baseUrl: 'http://192.168.92.155/static',   //"static"
+        text: {
+            env: 'xhr'
+        },
+        paths: {
+            common: 'common',
+            pagescript: 'pagescript',
+            jquery: 'common/core/jquery/jquery-2.1.4.min',
+            "jquery/browser": 'common/core/jquery-plugins/jquery.browser.min',
+            zepto:'common/core/zepto-build/zepto.min',
+            wxapi: 'common/core/jweixin-1.0.0',
+            'wxapi.default.config': 'common/core/wx.default.config',
+            hammerjs: 'common/core/hammer-2.0.6/hammer.min',
+            'jquery-hammer': 'common/core/hammer-2.0.6/jquery.hammer',
+            echarts:'common/core/echarts'
+        }
+    };
+</script>
+<script defer src="http://192.168.92.155/static/common/core/require.js" data-main="http://192.168.92.155/static/pagescript/demo/echarts/js/main.js"></script>
+</html>

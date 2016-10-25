@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<title>RPD-demo | 订单详情</title>
+<link rel="stylesheet/less" href="http://192.168.92.155/static/pagescript/demo/orderdetail/less/main.less"/>
+<script>
+    less = {
+        env: "development"
+    };
+</script>
+<script src="http://192.168.92.155/static/common/core/less.js"></script>
+<script>
+    less.watch();
+</script>
+</head>
+<body>
+<div id="container">
+    <header>
+        <h1>RPD</h1>
+        <span class="menu"><i class="glyphicon glyphicon-align-justify"></i></span>
+    </header>
+	<div class="mod" id="progress">
+		<div id="charts"></div>
+	</div>
+    <div class="topbar"><span><a href="/productlist"><i class="glyphicon glyphicon-wrench"></i>产品生产状况</a></span><span><a href="/workerlist"><i class="glyphicon glyphicon-dashboard"></i>实时产线进展</a></span></div>
+	<div class="mod" id="details">
+		<h3 class="item"><span class="title"></span>订单详情</h3>
+		<ul>
+			<li><span>名称</span>复活节</li>
+			<li><span>订单编号</span>WEDF1234d</li>
+			<li><span>客户</span>LG</li>
+			<li><span>订单金额</span>3000万</li>
+			<li><span>订单数量</span>100000件</li>
+			<li><span>开始生产日期</span>2016-10-20</li>
+			<li><span>结束生产日期</span>2016-12-02</li>
+			<li><span>交付日期</span>2016-12-05</li>
+			<li><span>产品工艺</span>切割焊点切割焊点</li>
+		</ul>
+	</div>
+    <footer>@copyRight shengjing 2016.</footer>
+</div>
+</body>
+<script>
+    var require = {
+        baseUrl: 'http://192.168.92.155/static',   //"static"
+        text: {
+            env: 'xhr'
+        },
+        paths: {
+            common: 'common',
+            pagescript: 'pagescript',
+            jquery: 'common/core/jquery/jquery-2.1.4.min',
+            "jquery/browser": 'common/core/jquery-plugins/jquery.browser.min',
+            zepto:'common/core/zepto-build/zepto.min',
+            wxapi: 'common/core/jweixin-1.0.0',
+            'wxapi.default.config': 'common/core/wx.default.config',
+            hammerjs: 'common/core/hammer-2.0.6/hammer.min',
+            'jquery-hammer': 'common/core/hammer-2.0.6/jquery.hammer',
+            echarts:'common/core/echarts'
+        }
+    };
+</script>
+<script defer src="http://192.168.92.155/static/common/core/require.js" data-main="http://192.168.92.155/static/pagescript/demo/orderdetail/js/main.js"></script>
+</html>
