@@ -66,18 +66,30 @@ require(['jquery','echarts','pagescript/demo/base/js/menu','common/lib/wAjax'],f
             }
         }
 
+        if(tid1){
+            clearInterval(tid1);
+        }
         var tid1 = setInterval(function(){
             drawCharts('line',myChart1);
         },3000);
 
+        if(tid2){
+            clearInterval(tid2);
+        }
         var tid2 = setInterval(function(){
             drawCharts('bar',myChart2);
         },3000);
 
+        if(tid3){
+            clearInterval(tid3);
+        }
         var tid3 = setInterval(function(){
             drawCharts('pie',myChart3);
         },3000);
 
+        if(tid4){
+            clearInterval(tid4);
+        }
         var tid4 = setInterval(function(){
             drawCharts('scatter',myChart4);
         },3000);
